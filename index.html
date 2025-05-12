@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Theme Switcher</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Animated Theme Switcher</h1>
+            <p>Customize your experience with themes, colors, and animations</p>
+        </header>
+
+        <div class="theme-switch-wrapper">
+            <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider"></div>
+            </label>
+            <span class="toggle-label">Dark Mode</span>
+        </div>
+
+        <div class="animation-box" id="animationBox">
+            Click Me!
+        </div>
+
+        <div class="preference-panel">
+            <h2>Customize Your Experience</h2>
+            
+            <div class="color-palette-section">
+                <h3>Accent Color</h3>
+                <div class="color-palette" id="colorPalette">
+                    <div class="color-option selected" style="background-color: #e74c3c;" data-color="#e74c3c"></div>
+                    <div class="color-option" style="background-color: #3498db;" data-color="#3498db"></div>
+                    <div class="color-option" style="background-color: #2ecc71;" data-color="#2ecc71"></div>
+                    <div class="color-option" style="background-color: #f39c12;" data-color="#f39c12"></div>
+                    <div class="color-option" style="background-color: #9b59b6;" data-color="#9b59b6"></div>
+                </div>
+            </div>
+
+            <div class="animation-selection">
+                <label for="animationSelect">Animation Style:</label>
+                <select id="animationSelect">
+                    <option value="bounce">Bounce</option>
+                    <option value="pulse">Pulse</option>
+                    <option value="shake">Shake</option>
+                    <option value="spin">Spin</option>
+                </select>
+            </div>
+
+            <div class="transition-control">
+                <label for="transitionSpeed">Transition Speed: <span id="speedValue">0.4s</span></label>
+                <input type="range" id="transitionSpeed" min="0.1" max="1.0" step="0.1" value="0.4">
+            </div>
+
+            <button class="btn" id="savePreferences">Save Preferences</button>
+            <button class="btn" id="resetPreferences">Reset Defaults</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
